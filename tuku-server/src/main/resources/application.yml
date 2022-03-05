@@ -1,0 +1,61 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.108.39.243:3306/YQtuku
+    username: root
+    password: 123456
+    druid:
+      initial-size: 10
+      min-idle: 10
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      connection-error-retry-attempts: 3
+      break-after-acquire-failure: true
+      time-between-connect-error-millis: 300000
+      remove-abandoned: true
+      remove-abandoned-timeout: 1800
+      transaction-query-timeout: 6000
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main
+
+yq:
+  cron:
+    frist: 0 53 07 * * ?
+    second: 30 53 07 * * ?
+#  website: https://www.163.com/dy/media/T1604976219840.html
+#  website: https://www.163.com/dy/media/T1624354879367.html
+#  website: https://www.163.com/dy/media/T1624414207614.html
+#  website: https://www.163.com/dy/media/T1624414207614.html
+#  website: https://www.163.com/dy/media/T1624078454509.html
+#  website: https://www.163.com/dy/media/T1623995134917.html
+#  website: https://www.163.com/dy/media/T1624001980358.html
+#  website: https://www.163.com/dy/media/T1624416808072.html
+#  website: https://www.163.com/dy/media/T1624336185322.html
+#  website: https://www.163.com/dy/media/T1624415527904.html
+#  website: https://www.163.com/dy/media/T1624335960972.html
+#  website: https://www.163.com/dy/media/T1537672392576.html
+#  website: https://www.163.com/dy/media/T1624432256540.html
+#  website: https://www.163.com/dy/media/T1624415435247.html
+#  website: https://www.163.com/dy/media/T1624417065913.html
+#  website: https://www.163.com/dy/media/T1623995374345.html
+#  website: https://www.163.com/dy/media/T1600665062386.html
+#  website: https://www.163.com/dy/media/T1612006643750.html
+  website: https://www.163.com/dy/media/T1623995601656.html
+
+
+
+server:
+  port: 9999
+
+
