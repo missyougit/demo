@@ -2,6 +2,7 @@ package com.yangqiang.tuku.service.impl;
 
 
 import com.yangqiang.tuku.mapper.TukuMapper;
+import com.yangqiang.tuku.mapper.UserActionMapper;
 import com.yangqiang.tuku.mapper.UserMapper;
 import com.yangqiang.tuku.model.*;
 import com.yangqiang.tuku.service.TukuService;
@@ -19,6 +20,8 @@ public class TukuServiceImpl implements TukuService {
     private TukuMapper tukuMapper;
     @Resource
     private UserMapper userMapper;
+    @Resource
+    private UserActionMapper userActionMapper;
 
     /**
      * 获取图片
@@ -45,14 +48,12 @@ public class TukuServiceImpl implements TukuService {
             UserActionCount userActionCount = userMapper.getUserActionCount("imagesId",Integer.toString(id));
             tuku.setUserActionCount(userActionCount);
 
-            System.out.println("id=>"+id);
-            System.out.println("openId=>"+openId);
-            UserAction userAction = tukuMapper.getUserAction(id, openId);
-            System.out.println(userAction);
+            UserAction userAction = userActionMapper.getUserAction(id, openId,1);
+
             if (userAction != null) {
                 tuku.setMyThumbsUp(true);
             }
-            System.out.println(tuku);
+
         }
 
         int tukuTotal = tukuMapper.getTukuTotal();
