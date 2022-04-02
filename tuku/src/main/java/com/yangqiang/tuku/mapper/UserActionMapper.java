@@ -11,7 +11,7 @@ public interface UserActionMapper {
 
     //获取图片
     @Select({"<script> " +
-            "select id,openId,imagesId,targetOpenId,thumbsUp,fenXiang,pingLun,content from user_action " +
+            "select id,openId,imagesId,thumbsUp,fenXiang,shouCang from user_action " +
             "where openId=#{openId} and imagesId=#{imagesId} " +
             "<if test='thumbsUp!=0'> " +
             "and thumbsUp=#{thumbsUp} " +
@@ -29,7 +29,7 @@ public interface UserActionMapper {
     int thumbsUp(UserAction userAction);
 
     //保存关系表
-    @Insert("insert into user_action values (null,#{openId},#{imagesId},#{targetOpenId},#{thumbsUp},#{fenXiang},#{pingLun},#{content})")
+    @Insert("insert into user_action values (null,#{openId},#{imagesId},#{thumbsUp},#{fenXiang},#{shouCang})")
     int addUserAction(UserAction userAction);
 
 }

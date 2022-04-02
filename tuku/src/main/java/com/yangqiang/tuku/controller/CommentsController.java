@@ -4,10 +4,7 @@ import com.yangqiang.tuku.model.Comments;
 import com.yangqiang.tuku.model.CommonResult;
 import com.yangqiang.tuku.service.CommentsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("comments")
@@ -21,6 +18,9 @@ public class CommentsController {
         return commentsService.addComments(comments);
     }
 
-
+    @GetMapping("/getComments")
+    public CommonResult getComments(int pageNum, int pageSize,int imagesId) {
+        return commentsService.getComments(pageNum,pageSize,imagesId);
+    }
 
 }

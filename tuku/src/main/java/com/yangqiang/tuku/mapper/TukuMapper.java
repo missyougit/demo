@@ -11,13 +11,8 @@ import java.util.List;
 public interface TukuMapper {
 
     //获取图片
-    @Select("select id,title,images,createTime from yq_images ORDER BY createTime DESC limit #{offset} , #{pageSize}")
-    List<Tuku> getImages(int offset, int pageSize);
-
-    //获取图片总数
-    @Select("select COUNT(id) from yq_images")
-    int getTukuTotal();
-
+    @Select("select id,title,images,createTime from yq_images ORDER BY createTime DESC")
+    List<Tuku> getImages();
 
 
 }

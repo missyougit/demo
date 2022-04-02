@@ -11,7 +11,7 @@ public class DateUtils {
      * @return
      */
     public static String getCurrentDate(){
-        DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         LocalDateTime currentDate = LocalDateTime.now();
         return dateTimeFormatter.format(currentDate);
     }

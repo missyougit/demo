@@ -18,7 +18,7 @@ public interface UserMapper {
     @Select("select\n" +
             "(select COUNT(id) from user_action where ${field}=#{fieldValue} and thumbsUp=1) thumbsUpCount ,\n" +
             "(select COUNT(id) from user_action where ${field}=#{fieldValue} and fenXiang=1) fenXiangCount ,\n" +
-            "(select COUNT(id) from user_action where ${field}=#{fieldValue} and pingLun=1) pingLunCount")
+            "(select COUNT(id) from user_action where ${field}=#{fieldValue} and shouCang=1) shouCangCount")
     UserActionCount getUserActionCount(String field,String fieldValue);
 
 

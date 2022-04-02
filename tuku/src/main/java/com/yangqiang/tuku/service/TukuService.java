@@ -6,7 +6,7 @@ import com.yangqiang.tuku.model.CommonResult;
 public interface TukuService {
 
     //获取图片
-    CommonResult getImages(int pageNo, int pageSize, String openId);
+    CommonResult getImages(int pageNum, int pageSize, String openId);
 
 
 }

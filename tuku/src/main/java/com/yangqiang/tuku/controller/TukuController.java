@@ -16,8 +16,8 @@ public class TukuController {
     private TukuService tukuService;
 
     @GetMapping("/list")
-    public CommonResult getImages(int pageNo, int pageSize, String openId){
-        return tukuService.getImages(pageNo,pageSize, openId);
+    public CommonResult getImages(int pageNum, int pageSize, String openId){
+        return tukuService.getImages(pageNum,pageSize, openId);
     }
 
 

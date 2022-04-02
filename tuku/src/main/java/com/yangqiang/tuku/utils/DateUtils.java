@@ -24,7 +24,7 @@ public class DateUtils {
     }
 
 
-    // 根据日期获取生日
+    // 根据生日计算年龄
     public static int getAge(String birthDay) {
 
         Date date = strToDay(birthDay);
@@ -62,7 +62,7 @@ public class DateUtils {
      * @return
      */
     public static String getCurrentDate(){
-        DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        DateTimeFormatter dateTimeFormatter=DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         LocalDateTime currentDate = LocalDateTime.now();
         return dateTimeFormatter.format(currentDate);
     }

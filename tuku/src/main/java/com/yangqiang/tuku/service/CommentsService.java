@@ -8,4 +8,8 @@ public interface CommentsService {
     //添加评论/回复
     CommonResult addComments(Comments comments);
 
+    //通过imagesId分页查询评论
+    CommonResult getComments(int pageNum, int pageSize,int imagesId);
+
+
 }
